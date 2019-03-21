@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SG.Gaming.Views.LoginView"
+             xmlns:Common="clr-namespace:SG.Gaming" 
+             xmlns:viewModelBase="clr-namespace:SG.Gaming.ViewModels"             
+             viewModelBase:ViewModelLocator.AutoWireViewModel="true"
+             Title="Login" BackgroundColor="{StaticResource LoginColor}">
+    <ContentPage.Resources>
+        
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.Padding>
+                <OnPlatform x:TypeArguments="Thickness"
+                            Android="20"
+                            iOS="20"/>
+            </Grid.Padding>
+
+            <!-- LOGO -->
+            <Grid
+                Grid.Row="0"
+                HorizontalOptions="CenterAndExpand"
+                BackgroundColor="#ebebeb"
+                Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Image 
+                    Source="{x:Static Common:CommonResources.LogoImagePath}" 
+                    HeightRequest="100" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Start" 
+                    Grid.Row="0" />
+            </Grid>
+
+            <!-- ENTRY FIELDS -->
+            <StackLayout
+                    Grid.Row="2"
+                    Orientation="Vertical">
+
+                <StackLayout.Spacing>
+                    <OnPlatform x:TypeArguments="x:Double"  Android="10" iOS="35" />
+                </StackLayout.Spacing>
+
+                <!-- USERNAME -->
+                <Label
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="White"
+                    FontSize="16"
+                    Text="Usuario:" />
+                <Entry 
+                    HorizontalOptions="FillAndExpand"/>
+
+                <!-- PASSWORD -->
+                <Label
+                    HorizontalOptions="FillAndExpand"
+                    TextColor="White"
+                    FontSize="16"
+                    Text="Contraseña:" />
+                <Entry 
+                    HorizontalOptions="FillAndExpand"
+                    IsPassword="True"/>
+                
+            </StackLayout>
+
+            <Button 
+                Grid.Row="4"
+                Text="Ingresar" 
+                BackgroundColor="#75c497" 
+                HorizontalOptions="Fill" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
