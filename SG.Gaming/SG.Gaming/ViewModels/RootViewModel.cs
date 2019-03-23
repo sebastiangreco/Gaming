@@ -30,7 +30,7 @@ namespace SG.Gaming.ViewModels
         {
             await base.ExecuteMethodAsync("ValidateLogin", async delegate ()
             {
-                await NavigationService.ShowPopupAsync<LoginViewModel>();
+                await NavigationService.ShowPopupAsync<SampleViewModel>();
             });
         }
     }

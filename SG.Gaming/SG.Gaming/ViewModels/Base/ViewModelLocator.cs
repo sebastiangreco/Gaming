@@ -43,6 +43,7 @@ namespace SG.Gaming.ViewModels
             builder.RegisterType<MenuViewModel>();
             builder.RegisterType<HomeViewModel>();
             builder.RegisterType<LoginViewModel>();
+            builder.RegisterType<SampleViewModel>();
 
             //Services
             builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
