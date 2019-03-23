@@ -18,7 +18,8 @@ namespace SG.Gaming.ViewModels
         {
             base.ExecuteMethod("HomeViewModel", delegate ()
             {
-                ReloadData();                
+                ReloadData();  
+                //Janeth
             });
         }
         #endregion
